@@ -8,7 +8,7 @@ export default function Offer() {
     return (
         <section className="offer">
             <h1> Poznaj naszą ofertę </h1>
-            <span> Poznaj naszą stylową kolekcję butów na każdą okazję. Jakość, wygoda i moda w każdej parze. Kup teraz! </span>
+            <p> Poznaj naszą stylową kolekcję butów na każdą okazję. Jakość, wygoda i moda w każdej parze. Kup teraz! </p>
             <div>
                 <Card path={offer1} title={"Nowości"} text={"Poznaj nowe style"} />
                 <Card path={offer2} title={"Specjalna oferta"} text={"Eksluzywne oferty"} />
@@ -24,7 +24,7 @@ function Card({ path, title, text }) {
         <section className="offer-card">
             <img src={path} alt={title} />
             <h2> {title} </h2>
-            <span> {text} </span>
+            <p> {text} </p>
             <button> Odkryj </button>
         </section>
     )

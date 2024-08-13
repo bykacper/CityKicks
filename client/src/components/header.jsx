@@ -1,11 +1,15 @@
-import React from "react";
+import React, { createRef, useEffect } from "react";
 import Logo from "./logo";
+import hamburgerButton from '../assets/images/hbutton.png'
+import useStore from "../store";
+import close from '../assets/images/close.png'
 
 export default function Header() {
     return (
         <header>
             <TopHeader />
             <BottomHeader />
+            <MobileMenu />
         </header>
     )
 }
@@ -41,8 +45,15 @@ function Navigation() {
 }
 
 function Details() {
+    const toogleMobileMenu = useStore((state) => state.toogleMobileMenu);
+
+    const toogleMenu = () => {
+        toogleMobileMenu();
+    }
+
     return (
         <section className="details">
+            <img src={hamburgerButton} className="hamburger-button" onClick={toogleMenu} alt="menu" />
             <button> Dołącz do nas </button>
         </section>
     )
@@ -53,6 +64,30 @@ function ButtonsBox() {
         <div className="buttons-box">
             <button className="buttons_box-first"> Zobacz kolekcję </button>
             <button className="buttons_box-second"> Inne sklepy </button>
+        </div>
+    )
+}
+
+function MobileMenu() {
+    const mobileMenu = createRef(null);
+    const isMenu = useStore((state) => state.isMobileMenu);
+    const toogleMobileMenu = useStore((state) => state.toogleMobileMenu)
+
+    useEffect(() => {
+        if(isMenu)
+            mobileMenu.current.style.left = "0px";
+        else
+            mobileMenu.current.style.left = "100vw";
+    }, [isMenu])
+
+    const toogleMenu = () => {
+        toogleMobileMenu();
+    }
+
+    return (
+        <div className="mobile-menu" ref={mobileMenu}> 
+            <img src={close} className="close-pic" onClick={toogleMenu}/>
+            <h1> mobile </h1>
         </div>
     )
 }

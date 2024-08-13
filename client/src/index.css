@@ -5,217 +5,468 @@
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 button {
   cursor: pointer;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 240px;
+@media only screen and (max-width: 767px) {
+  .top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vh 8vw;
+  }
+
+  .top-header ul {
+    display: none;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 3vh;
+    width: min-content;
+  }
+
+  .logo img {
+    width: 5.5vh;
+  }
+
+  .details button {
+    display: none;
+  }
+
+  .hamburger-button {
+    width: 6vh;
+  }
+
+  .bottom-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./assets/images/bottom_header-bg.png');
+    height: 35vh;
+    background-size: cover;
+    color: white;
+  }
+  
+  .bottom-header h1 {
+    font-size: 4.5vh;
+    text-align: center;
+  }
+  
+  .bottom-header p {
+    font-size: 2vh;
+    text-align: center;
+    margin-block: 1.5vh;
+    width: 95%;
+  }
+
+  .buttons-box button {
+    width: 30vw;
+    height: 4vh;
+    border-radius: 15px;
+    color: white;
+    margin-inline: 2vw;
+  }
+
+  .buttons_box-first {
+    background-color: #FF7B00;
+    border: none;
+  }
+
+  .buttons_box-second {
+    background-color: inherit;
+    border: solid white 1px;
+  }
+
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vh;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    z-index: 10;
+    transition: all .5s;
+  }
+
+  .mobile-menu .close-pic {
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+    width: 20vw;
+  }
+  
+  .offer {
+    padding: 3vh 8vw;
+  }
+
+  .offer h1 {
+    text-align: center;
+    font-weight: 450;
+    font-size: 3vh;
+  }
+
+  .offer p {
+    display: none;
+  }
+
+  .offer div {
+    margin-block: 20px;
+    display: flex;
+    gap: 4vw;
+    width: 100vw;
+    overflow-x: scroll;
+  }
+
+  .offer-card {
+    background-color: #F4F4F4;
+    width: 60vw;
+    height: 85vw;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border: solid #D9D9D9 1px;
+  }
+
+  .offer-card img {
+    width: 100%;
+  }
+
+  .offer-card h2 {
+    text-align: center;
+    font-weight: 400;
+    margin-block: 5px;
+    font-size: 3vh;
+  }
+
+  .offer-card p {
+    display: block;
+    text-align: center;
+    color: #878787;
+    font-size: 2vh;
+  }
+
+  .offer-card button {
+    position: absolute;
+    background-color: black;
+    color: white;
+    bottom: 1vh;
+    width: 20vw;
+    height: 2vh;
+  }
+
+  .newsletter {
+    background-image: url('./assets/images/newsletter-bg.jpg');
+    height: 32vh;
+    padding: 3vh 8vw;
+  }
+
+  .newsletter img {
+    display: none;
+  }
+
+  .newsletter h1 {
+    font-size: 7vw;
+  }
+
+  .newsletter p {
+    font-size: 4.5vw;
+    margin-block: 2vh;
+  }
+
+  .newsletter button {
+    background-color: black;
+    color: white;
+    width: 30vw;
+    height: 4vh;
+    border-radius: 15px;
+  }
+
+  .opinions {
+    padding: 3vh 8vw;
+  }
+
+  .opinions h1 {
+    text-align: center;
+  }
+
+  .opinion-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh 4vw;
+    text-align: center;
+    background-color: #F4F4F4;
+    border: solid #D9D9D9 1px;
+    flex-shrink: 0;
+  }
+
+  .opinions div {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    padding-block: 3vh;
+  }
+
+  .opinion-card p {
+    margin-block: 3vh;
+    width: 50vw;
+  }
+
+  .opinion-card span {
+    font-weight: bolder;
+  }
+
+  footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+    font-size: 2vh;
+  }
+
 }
 
-.logo span {
-  font-size: 36px;
-  font-weight: 450;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1024px) {
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 240px;
+  }
+  
+  .logo span {
+    font-size: 36px;
+    font-weight: 450;
+  }
+  
+  .top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 116px;
+    padding-inline: 155px;
+  }
+  
+  .top-header ul {
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+    font-size: 30px;
+    font-weight: lighter;
+  }
+  
+  .details button {
+    background-color: #0ACDEB;
+    color: white;
+    font-size: 22px;
+    width: 192px;
+    height: 43px;
+    border-radius: 15px;
+    border: none;
+  }
+  
+  .bottom-header {
+    background-image: url('./assets/images/bottom_header-bg.png');  
+    width: 100vw;
+    height: 424px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bottom-header h1 {
+    font-size: 55px;
+    font-weight: 400;
+  }
+  
+  .bottom-header p {
+    font-size: 25px;
+    width: 1637px;
+    text-align: center;
+    margin-block: 20px;
+  }
+  
+  .buttons-box button {
+    width: 282px;
+    height: 53px;
+    border-radius: 15px;
+    font-size: 27px;
+    color: white;
+    margin-inline: 25px;
+  }
+  
+  .buttons_box-first {
+    background-color: #FF7B00;
+    border: none;
+  }
+  
+  .buttons_box-second {
+    background-color: inherit;
+    border: solid white 1px;
+  }
+  
+  .offer {
+    height: 735px;
+    text-align: center;
+    padding-block: 50px;
+    padding-inline: 155px;
+  }
+  
+  .offer h1 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  
+  .offer span {
+    font-size: 18px;
+    color: #878787;
+  }
+  
+  .offer div {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
+  
+  .offer-card {
+    height: 570px;
+    background-color: #F4F4F4;
+    border: solid #D9D9D9 1px;
+  }
+  
+  .offer-card h2 {
+    margin: 25px 0 20px;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  
+  .offer-card span {
+    font-size: 23px;
+  }
+  
+  .offer-card button {
+    display: block;
+    margin: 35px auto 0;
+    width: 179px;
+    height: 39px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .newsletter {
+    display: flex;
+    justify-content: space-between;
+    height: 640px;
+    background-image: url('./assets/images/newsletter-bg.jpg');
+    padding-inline: 155px;
+  }
+  
+  .newsletter-details {
+    padding-block: 150px;
+  }
+  
+  .newsletter-details h1 {
+    font-size: 55px;
+    font-weight: 400;
+    width: 712px;
+  }
+  
+  .newsletter-details p {
+    font-size: 25px;
+    color: #878787;
+    margin-top: 15px;
+    width: 840px;
+  }
+  
+  .newsletter-details button {
+    background-color: black;
+    color: white;
+    width: 300px;
+    height: 80px;
+    font-size: 35px;
+    border-radius: 15px;
+    margin-top: 80px;
+  }
+  
+  .opinions {
+    text-align: center;
+    padding: 100px 155px;
+    height: 450px;
+  }
+  
+  .opinions > div {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
+  
+  .opinions h1 {
+    font-size: 50px;
+    font-weight: 400;
+  }
+  
+  .opinion-card {
+    background-color: #F4F4F4;
+    height: 314px;
+    width: 350px;
+    border: solid #D9D9D9 1px;
+  }
+  
+  .opinion-card p {
+    width: 90%;
+    margin: 20px auto;
+  }
+  
+  .opinion-card span {
+    font-weight: bolder;
+  }
+  
+  footer {
+    background-color: black;
+    color: white;
+    height: 93px;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-.top-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 116px;
-  padding-inline: 155px;
-}
-
-.top-header ul {
-  display: flex;
-  list-style-type: none;
-  gap: 50px;
-  font-size: 30px;
-  font-weight: lighter;
-}
-
-.details button {
-  background-color: #0ACDEB;
-  color: white;
-  font-size: 22px;
-  width: 192px;
-  height: 43px;
-  border-radius: 15px;
-  border: none;
-}
-
-.bottom-header {
-  background-image: url('./assets/images/bottom_header-bg.png');  
-  width: 100vw;
-  height: 424px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.bottom-header h1 {
-  font-size: 55px;
-  font-weight: 400;
-}
-
-.bottom-header p {
-  font-size: 25px;
-  width: 1637px;
-  text-align: center;
-  margin-block: 20px;
-}
-
-.buttons-box button {
-  width: 282px;
-  height: 53px;
-  border-radius: 15px;
-  font-size: 27px;
-  color: white;
-  margin-inline: 25px;
-}
-
-.buttons_box-first {
-  background-color: #FF7B00;
-  border: none;
-}
-
-.buttons_box-second {
-  background-color: inherit;
-  border: solid white 1px;
-}
-
-.offer {
-  height: 735px;
-  text-align: center;
-  padding-block: 50px;
-  padding-inline: 155px;
-}
-
-.offer h1 {
-  font-size: 45px;
-  font-weight: 400;
-  margin-bottom: 10px;
-}
-
-.offer span {
-  font-size: 18px;
-  color: #878787;
-}
-
-.offer div {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 50px;
-}
-
-.offer-card {
-  height: 570px;
-  background-color: #F4F4F4;
-  border: solid #D9D9D9 1px;
-}
-
-.offer-card h2 {
-  margin: 25px 0 20px;
-  font-size: 30px;
-  font-weight: 400;
-}
-
-.offer-card span {
-  font-size: 23px;
-}
-
-.offer-card button {
-  display: block;
-  margin: 35px auto 0;
-  width: 179px;
-  height: 39px;
-  border-radius: 15px;
-  background-color: black;
-  color: white;
-  font-size: 20px;
-}
-
-.newsletter {
-  display: flex;
-  justify-content: space-between;
-  height: 640px;
-  background-image: url('./assets/images/newsletter-bg.jpg');
-  padding-inline: 155px;
-}
-
-.newsletter-details {
-  padding-block: 150px;
-}
-
-.newsletter-details h1 {
-  font-size: 55px;
-  font-weight: 400;
-  width: 712px;
-}
-
-.newsletter-details p {
-  font-size: 25px;
-  color: #878787;
-  margin-top: 15px;
-  width: 840px;
-}
-
-.newsletter-details button {
-  background-color: black;
-  color: white;
-  width: 300px;
-  height: 80px;
-  font-size: 35px;
-  border-radius: 15px;
-  margin-top: 80px;
-}
-
-.opinions {
-  text-align: center;
-  padding: 100px 155px;
-  height: 450px;
-}
-
-.opinions > div {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 50px;
-}
-
-.opinions h1 {
-  font-size: 50px;
-  font-weight: 400;
-}
-
-.opinion-card {
-  background-color: #F4F4F4;
-  height: 314px;
-  width: 350px;
-  border: solid #D9D9D9 1px;
-}
-
-.opinion-card p {
-  width: 90%;
-  margin: 20px auto;
-}
-
-.opinion-card span {
-  font-weight: bolder;
-}
-
-footer {
-  background-color: black;
-  color: white;
-  height: 93px;
-  font-size: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}

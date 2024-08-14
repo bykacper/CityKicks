@@ -61,7 +61,7 @@ button {
   }
   
   .bottom-header p {
-    font-size: 2vh;
+    font-size: 1.9vh;
     text-align: center;
     margin-block: 1.5vh;
     width: 95%;
@@ -171,8 +171,9 @@ button {
 
   .newsletter {
     background-image: url('./assets/images/newsletter-bg.jpg');
-    height: 35vh;
-    padding: 3vh 8vw;
+    height: 26vh;
+    padding: 3vh 6vw;
+    position: relative;
   }
 
   .newsletter img {
@@ -184,8 +185,8 @@ button {
   }
 
   .newsletter p {
-    font-size: 4.5vw;
-    margin-block: 2vh;
+    font-size: 3.5vw;
+    margin-block: 1.5vh;
   }
 
   .newsletter button {
@@ -194,6 +195,8 @@ button {
     width: 30vw;
     height: 4vh;
     border-radius: 15px;
+    position: absolute;
+    bottom: 5vh
   }
 
   .opinions {

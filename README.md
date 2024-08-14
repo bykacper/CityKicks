@@ -1,3 +1,8 @@
+https://66bc76f7ab602363e9659ca4--citykicks.netlify.app/
+
+# [0.0.4]
+    - basic responsiveness for width (500px - 1920px) done
+
 # [0.0.3] 
     - responsiveness correction (max 767 px)
 

@@ -166,12 +166,12 @@ button {
     color: white;
     bottom: 1vh;
     width: 20vw;
-    height: 2vh;
+    height: 3vh;
   }
 
   .newsletter {
     background-image: url('./assets/images/newsletter-bg.jpg');
-    height: 32vh;
+    height: 35vh;
     padding: 3vh 8vw;
   }
 
@@ -205,11 +205,13 @@ button {
   }
 
   .opinion-card {
+    width: 300px;
+    height: 220px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1vh 4vw;
+    padding: 10px;
     text-align: center;
     background-color: #F4F4F4;
     border: solid #D9D9D9 1px;
@@ -224,12 +226,16 @@ button {
   }
 
   .opinion-card p {
-    margin-block: 3vh;
-    width: 50vw;
+    font-size: 80%;
+    margin-block: 1vh;
+    width: 100%;
   }
 
   .opinion-card span {
     font-weight: bolder;
+  }
+  .opinion-card img {
+    width: 18vw;
   }
 
   footer {

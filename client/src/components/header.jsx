@@ -87,7 +87,11 @@ function MobileMenu() {
     return (
         <div className="mobile-menu" ref={mobileMenu}> 
             <img src={close} className="close-pic" onClick={toogleMenu}/>
-            <h1> mobile </h1>
+            <ul>
+                <li> Sklep </li>
+                <li> O nas </li>
+                <li> Kontakt </li>
+            </ul>
         </div>
     )
 }

@@ -1,121 +1,139 @@
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+  --tomato: #FF7B00
+}
+
 * {
-  font-family: 'grandstander';
+  font-family: Grandstander;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  box-sizing: border-box;
 }
 
-button {
-  cursor: pointer;
+.logo {
+  width: min-content;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
 }
 
-@media only screen and (max-width: 767px) {
+.top-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-image: url('./assets/images/bottom_header-bg.png');
+  background-size: cover;
+}
+
+.bottom-header p {
+  width: 90%;
+}
+
+p, h1, h2 {
+  text-align: center;
+}
+
+.buttons-box button {
+  color: white;
+  margin-inline: 2vw;
+  border-radius: 15px;
+}
+
+.buttons_box-first {
+  background-color: var(--tomato);
+  border: none;
+}
+
+.buttons_box-second {
+  background-color: inherit;
+  border: solid white 1px;
+}
+
+.offer-card button {
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.offer-card {
+  background-color: #F4F4F4;
+  position: relative;
+  text-align: center;
+}
+
+.newsletter {
+  background-image: url('./assets/images/newsletter-bg.jpg');
+}
+
+.newsletter button {
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+}
+
+@media only screen and (max-width: 500px) { /* ---------------------------------------------------------------------------- */
+  .logo {
+    font-size: 115%; 
+  }
+
+  .logo img {
+    width: 8vw;
+  }
+
   .top-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1vh 8vw;
+    padding: 1vh 5vw;
   }
 
   .top-header ul {
     display: none;
   }
 
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 3vh;
-    width: min-content;
+  .top-header .hamburger-button {
+    width: 8vw;
   }
 
-  .logo img {
-    width: 5.5vh;
-  }
-
-  .details button {
+  .mobile-menu {
     display: none;
   }
 
-  .hamburger-button {
-    width: 6vh;
+  .top-header .details button {
+    display: none;
   }
 
   .bottom-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: url('./assets/images/bottom_header-bg.png');
     height: 35vh;
-    background-size: cover;
-    color: white;
   }
-  
+
   .bottom-header h1 {
-    font-size: 4.5vh;
-    text-align: center;
+    font-size: 170%;
   }
-  
+
   .bottom-header p {
-    font-size: 1.9vh;
-    text-align: center;
-    margin-block: 1.5vh;
-    width: 95%;
+    font-size: 100%;
+    margin-block: 2vh;
   }
 
   .buttons-box button {
     width: 30vw;
     height: 4vh;
-    border-radius: 15px;
-    color: white;
-    margin-inline: 2vw;
   }
 
-  .buttons_box-first {
-    background-color: #FF7B00;
-    border: none;
-  }
-
-  .buttons_box-second {
-    background-color: inherit;
-    border: solid white 1px;
-  }
-
-  .mobile-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 5vh;
-    position: fixed;
-    top: 0;
-    left: 100%;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    z-index: 10;
-    transition: all .5s;
-  }
-
-  .mobile-menu .close-pic {
-    position: absolute;
-    top: 2vh;
-    right: 2vw;
-    width: 20vw;
-  }
-  
   .offer {
-    padding: 3vh 8vw;
+    padding: 2vh 5vw;
   }
 
   .offer h1 {
-    text-align: center;
-    font-weight: 450;
-    font-size: 3vh;
+    font-size: 150%;
   }
 
   .offer p {
@@ -123,255 +141,22 @@ button {
   }
 
   .offer div {
-    margin-block: 20px;
+    margin-block: 2vh;
+    width: 100%;
     display: flex;
-    gap: 4vw;
-    width: 100vw;
-    overflow-x: scroll;
+    overflow: scroll;
   }
 
   .offer-card {
-    background-color: #F4F4F4;
-    width: 33vw;
-    height: 55vw;
-    display: flex;
+    width: 250px;
+    height: 300px;
     flex-shrink: 0;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+    margin-inline: 10px;
     border: solid #D9D9D9 1px;
-  }
-
-  .offer-card img {
-    width: 100%;
-  }
-
-  .offer-card h2 {
-    text-align: center;
-    font-weight: 400;
-    margin-block: 5px;
-    font-size: 2vh;
   }
 
   .offer-card p {
     display: block;
-    text-align: center;
-    color: #878787;
-    font-size: 2vh;
-  }
-
-  .offer-card button {
-    position: absolute;
-    background-color: black;
-    color: white;
-    bottom: 1vh;
-    width: 20vw;
-    height: 3vh;
-  }
-
-  .newsletter {
-    background-image: url('./assets/images/newsletter-bg.jpg');
-    height: 32vh;
-    padding: 3vh 6vw;
-    position: relative;
-  }
-
-  .newsletter img {
-    display: none;
-  }
-
-  .newsletter h1 {
-    font-size: 7vw;
-  }
-
-  .newsletter p {
-    font-size: 3.5vw;
-    margin-block: 1.5vh;
-  }
-
-  .newsletter button {
-    background-color: black;
-    color: white;
-    width: 30vw;
-    height: 4vh;
-    border-radius: 15px;
-    position: absolute;
-    bottom: 5vh
-  }
-
-  .opinions {
-    padding: 3vh 8vw;
-  }
-
-  .opinions h1 {
-    text-align: center;
-  }
-
-  .opinion-card {
-    width: 300px;
-    height: 220px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    text-align: center;
-    background-color: #F4F4F4;
-    border: solid #D9D9D9 1px;
-    flex-shrink: 0;
-  }
-
-  .opinions div {
-    display: flex;
-    gap: 20px;
-    overflow-x: scroll;
-    padding-block: 3vh;
-  }
-
-  .opinion-card p {
-    font-size: 80%;
-    margin-block: 1vh;
-    width: 100%;
-  }
-
-  .opinion-card span {
-    font-weight: bolder;
-  }
-  .opinion-card img {
-    width: 18vw;
-  }
-
-  footer {
-    background-color: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 6vh;
-    font-size: 2vh;
-  }
-
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .top-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1vh 8vw;
-  }
-
-  .top-header ul {
-    display: flex;
-    gap: 40px;
-    font-size: 16px;
-    font-weight: lighter;
-  }
-
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 3vh;
-    width: min-content;
-  }
-
-  .logo img {
-    width: 5.5vh;
-  }
-
-  .details button {
-    background-color: #0ACDEB;
-    color: white;
-    font-size: 15px;
-    width: 130px;
-    height: 30px;
-    border-radius: 15px;
-    border: none;
-  }
-
-  .hamburger-button {
-    display: none;
-  }
-
-  .bottom-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: url('./assets/images/bottom_header-bg.png');
-    height: 35vh;
-    background-size: cover;
-    color: white;
-  }
-  
-  .bottom-header h1 {
-    font-size: 4.5vh;
-    text-align: center;
-  }
-  
-  .bottom-header p {
-    font-size: 1.9vh;
-    text-align: center;
-    margin-block: 1.5vh;
-    width: 95%;
-  }
-
-  .buttons-box button {
-    width: 30vw;
-    height: 4vh;
-    border-radius: 15px;
-    color: white;
-    margin-inline: 2vw;
-  }
-
-  .buttons_box-first {
-    background-color: #FF7B00;
-    border: none;
-  }
-
-  .buttons_box-second {
-    background-color: inherit;
-    border: solid white 1px;
-  }
-
-  .mobile-menu {
-    display: none;
-  }
-
-  .offer {
-    padding-block: 30px;
-  }
-
-  .offer h1 {
-    text-align: center;
-    font-weight: 450;
-    font-size: 3vh;
-  }
-
-  .offer p {
-    display: none;
-  }
-
-  .offer div {
-    margin-block: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100vw;
-    overflow-x: scroll;
-    gap: 20px;
-  }
-
-  .offer-card {
-    width: 45%;
-    height: 60vh;
-    display: flex;
-    flex-shrink: 0;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    border: solid #D9D9D9 1px;
   }
 
   .offer-card img {
@@ -381,415 +166,239 @@ button {
   }
 
   .offer-card h2 {
-    text-align: center;
-    font-weight: 400;
-    margin-block: 5px;
-    font-size: 3vh;
-  }
-
-  .offer-card p {
-    display: block;
-    text-align: center;
-    color: #878787;
-    font-size: 2vh;
+    margin-top: 10px;
+    font-size: 150%;
   }
 
   .offer-card button {
-    position: absolute;
-    background-color: black;
-    color: white;
-    bottom: 1vh;
-    width: 20vw;
-    height: 3vh;
+    margin-top: 10px;
+    width: 30vw;
+    height: 25px;
+    bottom: 5px;
   }
 
   .newsletter {
-    background-image: url('./assets/images/newsletter-bg.jpg');
-    height: 32vh;
-    padding: 3vh 6vw;
-    position: relative;
-  }
-
-  .newsletter img {
-    display: none;
+    height: 180px;
+    padding: 3vh 7vw 4vh; 
   }
 
   .newsletter h1 {
-    font-size: 5vw;
+    font-size: 150%;
+    text-align: left;
   }
 
   .newsletter p {
-    font-size: 3vw;
-    margin-block: 1.5vh;
+    font-size: 110%;
+    text-align: left;
+    margin-block: 15px;
   }
 
   .newsletter button {
-    background-color: black;
-    color: white;
-    width: 30vw;
-    height: 4vh;
-    border-radius: 15px;
-    position: absolute;
-    bottom: 5vh
+    width: 40vw;
+    height: 5vh;
   }
 
   .opinions {
-    padding: 3vh 2vw;
-  }
-
-  .opinions h1 {
-    text-align: center;
-  }
-
-  .opinion-card {
-    width: 47%;
-    height: 28vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    text-align: center;
-    background-color: #F4F4F4;
-    border: solid #D9D9D9 1px;
-    flex-shrink: 0;
+    padding: 1vh 5vw;
   }
 
   .opinions div {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    overflow-x: scroll;
-    padding-block: 3vh;
-    gap: 20px;
+    width: 100%;
+    overflow: scroll;
+    margin-block: 20px;
   }
 
-  .opinion-card p {
-    font-size: 80%;
-    margin-block: 1vh;
-    width: 100%;
+  .opinion-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #F4F4F4;
+    width: 250px;
+    flex-shrink: 0;
+    margin-inline: 10px;
+    padding-block: 10px;
+    border: solid #D9D9D9 1px;    
   }
 
   .opinion-card span {
     font-weight: bolder;
   }
-  .opinion-card img {
-    width: 10vw;
-  }
 
   footer {
     background-color: black;
-    color: white;
+    color: white; 
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 6vh;
-    font-size: 2vh;
+    font-size: 150%;
   }
+
 }
 
-
-
-
-
-
-
-
-
-
-
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 501px) and (max-width: 767px) { /* ---------------------------------------------------------------------------- */
   .logo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 240px;
-  }
-  
-  .logo span {
-    font-size: 36px;
-    font-weight: 450;
-  }
-  
-  .top-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 116px;
-    padding-inline: 10vw;
-  }
-  
-  .top-header ul {
-    display: flex;
-    list-style-type: none;
-    gap: 50px;
-    font-size: 1.5vw;
-    font-weight: lighter;
-  }
-  
-  .details button {
-    background-color: #0ACDEB;
-    color: white;
-    font-size: 22px;
-    width: 192px;
-    height: 43px;
-    border-radius: 15px;
-    border: none;
+    font-size: 165%;
   }
 
-  .hamburger-button {
+  .top-header {
+    padding: 1vh 5vw;
+  }
+
+  .top-header ul {
     display: none;
   }
-  
-  .bottom-header {
-    background-image: url('./assets/images/bottom_header-bg.png');  
-    width: 100vw;
-    height: 424px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .bottom-header h1 {
-    font-size: 55px;
-    font-weight: 400;
-  }
-  
-  .bottom-header p {
-    font-size: 25px;
-    width: 90%;
-    text-align: center;
-    margin-block: 20px;
-  }
-  
-  .buttons-box button {
-    width: 282px;
-    height: 53px;
-    border-radius: 15px;
-    font-size: 27px;
-    color: white;
-    margin-inline: 25px;
-  }
-  
-  .buttons_box-first {
-    background-color: #FF7B00;
-    border: none;
-  }
-  
-  .buttons_box-second {
-    background-color: inherit;
-    border: solid white 1px;
+
+  .top-header .hamburger-button {
+    width: 10vw;
   }
 
   .mobile-menu {
     display: none;
   }
-  
-  .offer {
-    height: 88vh;
-    text-align: center;
-    padding-block: 50px;
-    padding-inline: 155px;
+
+  .top-header .details button {
+    display: none;
   }
-  
+
+  .bottom-header {
+    height: 45vh;
+  }
+
+  .bottom-header h1 {
+    font-size: 210%;
+  }
+
+  .bottom-header p {
+    font-size: 140%;
+    margin-block: 2vh;
+  }
+
+  .buttons-box button {
+    width: 30vw;
+    height: 5vh;
+    font-size: 110%;
+  }
+
+  .offer {
+    padding: 2vh 5vw;
+  }
+
   .offer h1 {
-    font-size: 45px;
-    font-weight: 400;
-    margin-bottom: 10px;
-  }
-  
-  .offer span {
-    font-size: 18px;
-    color: #878787;
-  }
-  
-  .offer div {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
-    gap: 1vw;
-  }
-  
-  .offer-card {
-    height: 32vw;
-    background-color: #F4F4F4;
-    border: solid #D9D9D9 1px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-size: 180%;
   }
 
-  .offer-card img {
-    width: 100%;
+  .offer p {
+    display: none;
   }
-  
+
+  .offer div {
+    display: flex;
+    overflow: scroll;
+    margin-block: 20px;
+  }
+
+  .offer-card {
+    margin-inline: 10px;
+    width: 350px;
+    height: 350px;
+  }
+
   .offer-card h2 {
-    margin: 25px 0 15px 0;
-    font-size: 2vw;
-    font-weight: 400;
+    margin-top: 5px;
   }
-  
-  .offer-card span {
-    font-size: 90%;
-  }
-  
-  .offer-card button {
+
+  .offer-card p {
     display: block;
-    margin: 35px auto 0;
-    width: 80%;
-    height: 39px;
-    border-radius: 15px;
-    background-color: black;
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    bottom: 5vh;
-  }
-  
-  .newsletter {
-    display: flex;
-    justify-content: space-between;
-    height: 90vh;
-    background-image: url('./assets/images/newsletter-bg.jpg');
-    padding-inline: 100px;
-  }
-  
-  .newsletter-details {
-    padding-block: 10vh;
-    width: 60%;
-    position: relative;;
-  }
-  
-  .newsletter-details h1 {
-    font-size: 3vw;
-    font-weight: 400;
-    width: 90%;
-  }
-  
-  .newsletter-details p {
-    font-size: 2vw;
-    color: #878787;
-    margin-block: 5vh; 
-    width: 100%;
-  }
-  
-  .newsletter-details button {
-    background-color: black;
-    color: white;
-    width: 60%;
-    height: 15%;
-    font-size: 200%;
-    border-radius: 15px;
-    margin-top: 80px;
-    position: absolute;
-    bottom: 25vh;
-  }
-
-  .newsletter img {
-    object-fit: contain;
-    object-position: top;
-  }
-  
-  .opinions {
-    text-align: center;
-    padding: 100px 155px;
-    height: 70vh;
-  }
-  
-  .opinions > div {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
-    gap: 20px;
-  }
-  
-  .opinions h1 {
-    font-size: 50px;
-    font-weight: 400;
-  }
-  
-  .opinion-card {
-    background-color: #F4F4F4;
-    height: 35vh;
-    width: 55vw;
-    border: solid #D9D9D9 1px;
-  }
-  
-  .opinion-card p {
-    width: 90%;
-    margin: 20px auto;
-  }
-  
-  .opinion-card span {
-    font-weight: bolder;
-  }
-  
-  footer {
-    background-color: black;
-    color: white;
-    height: 93px;
-    font-size: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-
-
-/* MEDIA QUERY PRZEJŚCIOWE */
-
-@media only screen and (min-width: 600px) and (max-width: 900px) {
-  .offer {
-    padding: 30px;
-  }
-
-  .offer div {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  .offer-card {
-    width: 47%;
-    height: 50vh;
   }
 
   .offer-card img {
+    height: 75%;
     object-fit: cover;
   }
 
+  .offer-card button {
+    bottom: 8px;
+    width: 15vw;
+    height: 20px;
+  }
+
+  .newsletter {
+    height: 200px;
+    padding: 3vh 7vw 4vh; 
+  }
+
+  .newsletter h1 {
+    font-size: 200%;
+    text-align: left;
+  }
+
+  .newsletter p {
+    font-size: 130%;
+    text-align: left;
+    margin-block: 20px 25px;
+  }
+
+  .newsletter button {
+    width: 40vw;
+    height: 5vh;
+  }
+
   .opinions {
-    padding: 30px;
+    padding: 1vh 5vw;
+    margin-block: 10px;
   }
 
   .opinions div {
     display: flex;
     width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    overflow: scroll;
+    margin-block: 20px;
   }
 
   .opinion-card {
-    width: 48%;
-    height: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #F4F4F4;
+    width: 250px;
+    flex-shrink: 0;
+    margin-inline: 10px;
+    padding-block: 10px;
+    border: solid #D9D9D9 1px;    
   }
 
-  .opinion-card img {
-    width: 14vw;
+  .opinion-card span {
+    font-weight: bolder;
   }
+
+  footer {
+    background-color: black;
+    color: white; 
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 150%;
+  }
+
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1500px) {
-  .opinions {
-    padding: 50px;
-  }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {}
 
-  .opinion-card {
-    height: 42vh;
-  }
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {}
+
+@media only screen and (min-width: 1440px) {}
+
+
+
+
+
+.newsletter img {
+  display: none;
 }

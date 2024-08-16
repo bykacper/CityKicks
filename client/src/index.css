@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-  --tomato: #FF7B00
+  --tomato: #FF7B00;
+  --lightBlue: #0ACDEB;
 }
 
 * {
@@ -38,6 +39,11 @@
 
 p, h1, h2 {
   text-align: center;
+}
+
+.offer p {
+  color: #878787;
+  font-size:  120%;
 }
 
 .buttons-box button {
@@ -81,9 +87,30 @@ p, h1, h2 {
   border-radius: 15px;
 }
 
-@media only screen and (max-width: 500px) { /* ---------------------------------------------------------------------------- */
+.newsletter img {
+  display: none;
+}
+
+button {
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  color: white;
+  background-color: black;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 150%;
+}
+
+@media only screen and (max-width: 500px) {
+
+  /* ---------------------------------------------------------------------------- */
   .logo {
-    font-size: 115%; 
+    font-size: 115%;
   }
 
   .logo img {
@@ -179,7 +206,7 @@ p, h1, h2 {
 
   .newsletter {
     height: 180px;
-    padding: 3vh 7vw 4vh; 
+    padding: 3vh 7vw 4vh;
   }
 
   .newsletter h1 {
@@ -220,26 +247,17 @@ p, h1, h2 {
     flex-shrink: 0;
     margin-inline: 10px;
     padding-block: 10px;
-    border: solid #D9D9D9 1px;    
+    border: solid #D9D9D9 1px;
   }
 
   .opinion-card span {
     font-weight: bolder;
   }
-
-  footer {
-    background-color: black;
-    color: white; 
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 150%;
-  }
-
 }
 
-@media only screen and (min-width: 501px) and (max-width: 767px) { /* ---------------------------------------------------------------------------- */
+@media only screen and (min-width: 501px) {
+
+  /* ---------------------------------------------------------------------------- */
   .logo {
     font-size: 165%;
   }
@@ -328,7 +346,7 @@ p, h1, h2 {
 
   .newsletter {
     height: 200px;
-    padding: 3vh 7vw 4vh; 
+    padding: 3vh 7vw 4vh;
   }
 
   .newsletter h1 {
@@ -370,35 +388,309 @@ p, h1, h2 {
     flex-shrink: 0;
     margin-inline: 10px;
     padding-block: 10px;
-    border: solid #D9D9D9 1px;    
+    border: solid #D9D9D9 1px;
   }
 
   .opinion-card span {
     font-weight: bolder;
   }
+}
 
-  footer {
-    background-color: black;
-    color: white; 
-    height: 10vh;
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+  .top-header .hamburger-button {
+    width: 8vw;
+  }
+
+  .newsletter {
     display: flex;
+    position: relative;
+  }
+
+  .newsletter h1 {
+    width: 70%;
+  }
+
+  .newsletter p {
+    width: 60%;
+  }
+
+  .newsletter img {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    display: block;
+    width: 250px;
+    object-fit: cover;
+  }
+
+  .newsletter button {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .offer 
+  .top-header .hamburger-button {
+    width: 6vw;
+  }
+
+  .bottom-header h1 {
+    font-size: 250%;
+  }
+
+  .bottom-header p {
+    font-size: 160%;
+  }
+
+  .newsletter {
+    height: 250px;
+    padding-inline: 10vw;
+  }
+
+  .newsletter h1 {
+    font-size: 250%;
+    width: 72%;
+  }
+
+  .newsletter img {
+    position: absolute;
+    top: 0;
+    right: 10vw;
+    display: block;
+    width: 300px;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (min-width: 1212px) {
+  .offer p {
+    display: block;
+  }
+
+  .hamburger-button {
+    display: none;
+  }
+
+  .top-header {
     align-items: center;
+  }
+
+  .top-header ul {
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+    font-size: 150%;
+    font-weight: lighter;
+
+  }
+
+  .top-header .details button {
+    display: block;
+    background-color: var(--lightBlue);
+    border: none;
+    width: 150px;
+    height: 40px;
+    border-radius: 15px;
+  }
+
+  .offer div,
+  .opinions div{
+    display: flex;
     justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 1439px) {
+  .top-header .details button {
+    width: 200px;
+    height: 50px;
+    font-size: 120%;
+  }
+
+  .logo img {
+    width: vw;
+  }
+
+  .logo {
+    font-size: 180%;
+  }
+
+  .bottom-header h1 {
+    font-size: 300%;
+  }
+
+  .bottom-header p {
+    font-size: 200%;
+  }
+
+  .bottom-header .buttons-box button {
+    width: 300px;
     font-size: 150%;
   }
 
+  .offer h1 {
+    font-size: 200%;
+    margin-block: 10px;
+  }
+
+  .offer p {
+    display: block;
+  }
+  
+  .offer div {
+    overflow: hidden;
+  }
+
+  .offer-card {
+    height: 400px;
+  }
+  
+  .offer-card button {
+    width: 170px;
+    height: 25px;
+    font-size: 100%;
+  }
+
+  .offer-card img {
+    width: 100%;
+  }
+
+  .newsletter {
+    box-sizing: border-box;
+    height: 500px;
+    padding-block: 75px;
+    display: flex;
+    position: relative;
+  }
+
+  .newsletter h1 {
+    font-size: 300%;
+    width: 60%;
+  }
+
+  .newsletter p {
+    font-size: 200%;
+    width: 60%;
+  }
+
+  .newsletter button {
+    width: 400px;
+    height: 75px;
+    font-size: 150%;
+    margin-top: 50px;
+  }
+
+  .newsletter img { 
+    top: 0;
+    position: absolute;
+    display: block;
+    width: 600px;
+    height: 500px;
+    object-fit: contain;
+    right: 100px;
+  }
+
+  .opinions div {
+    overflow: hidden;
+  }
+
+  .opinion-card {
+    padding: 0;
+    width: 350px;
+    height: 300px;
+  }
+
+  .opinion-card p {
+    width: 95%;
+  }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {}
+@media only screen and (min-width: 1920px) {
+  .logo img {
+    width: 5vw;
+  }
 
-@media only screen and (min-width: 1024px) and (max-width: 1439px) {}
+  .logo {
+    font-size: 300%;
+  }
+  
+  .top-header ul {
+    font-size: 250%;
+  }
 
-@media only screen and (min-width: 1440px) {}
+  .top-header .details button {
+    width: 10vw;
+    height: 68px;
+    font-size: 170%;
+  }
 
+  .bottom-header h1 {
+    font-size: 500%;
+  }
 
+  .bottom-header p {
+    font-size: 250%;
+  }
 
+  .offer h1 {
+    font-size: 350%;
+  }
+  
+  .offer p {
+    font-size: 150%;
+  }
 
+  .offer-card {
+    width: 25%;
+    height: 550px;
+  }
+  
+  .offer-card h2 {
+    font-size: 250%;  
+  }
 
-.newsletter img {
-  display: none;
+  .offer-card button {
+    width: 40%;
+    height: 40px;
+    bottom: 10px;
+  }
+
+  .newsletter {
+    height: 700px;
+  }
+
+  .newsletter h1 {
+    margin-top: 50px;
+    font-size: 500%;
+    width: 75%;
+  }
+
+  .newsletter p {
+    font-size: 250%;
+    width: 60%;
+    
+  }
+
+  .newsletter img {
+    width: 800px;
+    height: 700px;
+  }
+
+  .opinions h1 {
+    font-size: 300%;
+  }
+
+  .opinions div {
+    margin-block: 50px;
+  }
+
+  .opinion-card img {
+    width: 5vw;
+  }
+
+  .opinion-card {
+    width: 25%;
+    height: 400px;
+    font-size: 150%;
+  }
 }

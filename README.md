@@ -1,5 +1,9 @@
 https://66bc76f7ab602363e9659ca4--citykicks.netlify.app/
 
+# [0.0.6] 
+    - responsiveness for width (0px - 2500px) is done (home.jsx)
+    - first css optimalization
+
 # [0.0.5]
     - responsiveness for width (0px - 767px) is done (home.jsx)
 

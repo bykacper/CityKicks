@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   gap: 1vw;
+  cursor: pointer;
 }
 
 .top-header {
@@ -37,13 +38,15 @@
   width: 90%;
 }
 
-p, h1, h2 {
+p,
+h1,
+h2 {
   text-align: center;
 }
 
 .offer p {
   color: #878787;
-  font-size:  120%;
+  font-size: 120%;
 }
 
 .buttons-box button {
@@ -105,6 +108,12 @@ footer {
   justify-content: center;
   font-size: 150%;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 
 @media only screen and (max-width: 500px) {
 
@@ -429,8 +438,7 @@ footer {
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
-  .offer 
-  .top-header .hamburger-button {
+  .offer .top-header .hamburger-button {
     width: 6vw;
   }
 
@@ -494,9 +502,27 @@ footer {
   }
 
   .offer div,
-  .opinions div{
+  .opinions div {
     display: flex;
     justify-content: center;
+  }
+
+  .expanded-menu {
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    width: 60%;
+    left: 50%;
+    background-color: white;;
+    height: 0px;
+    transform: translateX(-50%);
+    transition: all .5s;
+    transition-delay: .2s;
+    font-family: monospace;
+  }
+
+  .shop-li:hover .expanded-menu {
+    opacity: 1;
   }
 }
 
@@ -508,11 +534,65 @@ footer {
   }
 
   .logo img {
-    width: vw;
+    width: 4vw;
   }
 
   .logo {
     font-size: 180%;
+  }
+
+  .top-header {
+    position: relative;
+  }
+
+  .expanded-menu {
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    width: 60%;
+    left: 50%;
+    background-color: white;
+    ;
+    height: 0px;
+    transform: translateX(-50%);
+    transition: all .5s;
+    transition-delay: .2s;
+    font-family: monospace;
+    cursor:auto ;
+  }
+
+  .shop-li {
+    cursor: pointer;
+  }
+
+  .expanded-menu table {
+    width: 100%;
+    height: 100%;
+  }
+
+  td {
+    padding-inline: 2vw;
+    width: 25%;
+  }
+
+  .expanded-menu h3 {
+    font-family: Poppins;
+  }
+
+  .expanded-menu p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    font-size: 90%;
+    cursor: pointer;
+  }
+
+  .expanded-menu p:hover {
+    color: rgb(145, 145, 145)
+  }
+
+  .shop-li:hover .expanded-menu {
+    opacity: 1  ;
+    height: 500px;
   }
 
   .bottom-header h1 {
@@ -536,7 +616,7 @@ footer {
   .offer p {
     display: block;
   }
-  
+
   .offer div {
     overflow: hidden;
   }
@@ -544,7 +624,7 @@ footer {
   .offer-card {
     height: 400px;
   }
-  
+
   .offer-card button {
     width: 170px;
     height: 25px;
@@ -580,7 +660,7 @@ footer {
     margin-top: 50px;
   }
 
-  .newsletter img { 
+  .newsletter img {
     top: 0;
     position: absolute;
     display: block;
@@ -603,9 +683,32 @@ footer {
   .opinion-card p {
     width: 95%;
   }
+
+  .products-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .product-card {
+    width: 592px;
+    text-align: left;
+    margin-block: 50px;
+  }
+
+  .product-card h1 {
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  .product-card h3 {
+    margin-left: 20px;
+    color: #878787;
+    font-weight: 400;
+  }
 }
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 2000px) {
   .logo img {
     width: 5vw;
   }
@@ -613,7 +716,7 @@ footer {
   .logo {
     font-size: 300%;
   }
-  
+
   .top-header ul {
     font-size: 250%;
   }
@@ -635,7 +738,7 @@ footer {
   .offer h1 {
     font-size: 350%;
   }
-  
+
   .offer p {
     font-size: 150%;
   }
@@ -644,9 +747,9 @@ footer {
     width: 25%;
     height: 550px;
   }
-  
+
   .offer-card h2 {
-    font-size: 250%;  
+    font-size: 250%;
   }
 
   .offer-card button {
@@ -668,7 +771,7 @@ footer {
   .newsletter p {
     font-size: 250%;
     width: 60%;
-    
+
   }
 
   .newsletter img {

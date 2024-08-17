@@ -91,7 +91,7 @@ function MobileMenu() {
         <div className="mobile-menu" ref={mobileMenu}>
             <img src={close} className="close-pic" onClick={toogleMenu} />
             <ul>
-                <li> Sklep </li>
+                <Link to = '/shop'> <li> Sklep </li></Link>
                 <li> O nas </li>
                 <li> Kontakt </li>
             </ul>

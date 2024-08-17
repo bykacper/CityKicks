@@ -1,5 +1,9 @@
 https://66bc76f7ab602363e9659ca4--citykicks.netlify.app/
 
+# [0.0.9]
+    - added basic responsivenss to products list (shop.jsx)
+    - added reset filter button to products filter 
+
 # [0.0.8]
     - added product filter
     - added new products (adidas shoes)

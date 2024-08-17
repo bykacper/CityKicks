@@ -113,7 +113,7 @@ const productsList = [
         "brand": "Adidas",
         "model": "Yeezy",
         "price": 419.65,
-        "imagePath": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d0619255387a4ffe9b50ad90011df4dd_9366/YZY_QNTM_ADULTS_Szary_GX1317_01_standard.jpg"
+        "imagePath": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d0619255387a4ffe9b50ad90011df4dd_9366/YZY_QNTM_ADULTS_Szary_GX1317_01_standard.jp"
     },
     
     // Dodaj więcej produktów, jeśli to konieczne

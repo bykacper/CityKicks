@@ -24,6 +24,34 @@
   justify-content: space-between;
 }
 
+.mobile-menu {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,.5);
+  z-index: 21;
+  transition: all .5s;
+}
+
+.mobile-menu ul {
+  list-style-type: none;
+}
+
+.close-pic {
+  width: 20vw;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
 .bottom-header {
   display: flex;
   flex-direction: column;
@@ -118,6 +146,12 @@ a {
 @media only screen and (max-width: 500px) {
 
   /* ---------------------------------------------------------------------------- */
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
   .logo {
     font-size: 115%;
   }
@@ -136,10 +170,6 @@ a {
 
   .top-header .hamburger-button {
     width: 8vw;
-  }
-
-  .mobile-menu {
-    display: none;
   }
 
   .top-header .details button {
@@ -262,6 +292,19 @@ a {
   .opinion-card span {
     font-weight: bolder;
   }
+
+  .products-filter {
+    display: none;
+  }
+
+  .product-card {
+    width: 90%;
+    margin: 30px auto;
+  }
+
+  .product-card img {
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 501px) {
@@ -281,10 +324,6 @@ a {
 
   .top-header .hamburger-button {
     width: 10vw;
-  }
-
-  .mobile-menu {
-    display: none;
   }
 
   .top-header .details button {
@@ -467,6 +506,50 @@ a {
     display: block;
     width: 300px;
     object-fit: cover;
+  }
+
+  .products-box {
+    display: flex;
+    width: 100vw;
+  }
+
+  .products-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .products-filter {
+    display: none;
+  }
+
+  .products-filter h1 {
+    text-align: left;
+  }
+
+  .products-filter p {
+    text-align: left;
+  }
+
+  .product-card {
+    width: 355px;
+  }
+
+  .product-card img {
+    width: 100%;
+  }
+
+  .products-filter button {
+    position: absolute;
+    bottom: 50px;
+    background-color: var(--tomato);
+    width: 200px;
+    height: 50px;
+    font-size: 125%;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
   }
 }
 
@@ -722,6 +805,7 @@ a {
     box-sizing: border-box;
     width: 20%;
     padding: 2vh 2%;
+    position: relative;
     text-align: left;
   }
 
@@ -743,6 +827,18 @@ a {
 
   .products-filter p:hover {
     color: #FF7B00;
+  }
+
+  .products-filter button {
+    position: absolute;
+    bottom: 50px;
+    background-color: var(--tomato);
+    width: 70%;
+    height: 50px;
+    font-size: 125%;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
   }
 }
 

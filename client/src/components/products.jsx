@@ -62,6 +62,12 @@ function ProductFilter() {
         navigate(url);
         // Tutaj możesz dodać logikę przekierowania
     }
+    
+    const resetFilter = () => {
+        navigate('/shop');
+        setCurrentBrand(null);
+        setCurrentModels(null);
+    }
 
     return (
         <div className="products-filter">
@@ -77,12 +83,16 @@ function ProductFilter() {
                 <p> Timberland </p>
             </div>
             {currentModels && currentModels.length > 0 && (
-                <div>
-                    <h1>Model</h1>
-                    {currentModels.map((model, index) => (
-                        <p key={index} onClick={e => redirect(e)}>{model}</p>
-                    ))}
-                </div>
+                <>
+                    <div>
+                        <h1>Model</h1>
+                        {currentModels.map((model, index) => (
+                            <p key={index} onClick={e => redirect(e)}>{model}</p>
+                        ))}
+                    </div>
+                    <button onClick={resetFilter}> Resetuj filtr   </button>
+                </>
+
             )}
         </div>
     )

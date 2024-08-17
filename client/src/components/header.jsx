@@ -134,7 +134,7 @@ function ExpandedMenu() {
                         <p> 580 </p>
                         <p> 574 </p>
                         <p> 550 </p>
-                        <p> 550 </p>
+                        <p> 540 </p>
                     </td>
                 </tr>
                 <tr>

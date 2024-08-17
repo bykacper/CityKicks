@@ -1,7 +1,11 @@
 https://66bc76f7ab602363e9659ca4--citykicks.netlify.app/
 
+# [0.0.8]
+    - added product filter
+    - added new products (adidas shoes)
+
 # [0.0.7] 
-    - add simple product list page
+    - added simple product list page
 
 # [0.0.6] 
     - responsiveness for width (0px - 2500px) is done (home.jsx)

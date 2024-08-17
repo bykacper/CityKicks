@@ -67,6 +67,54 @@ const productsList = [
         "price": 389.99,
         "imagePath": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/18919e9a-c43d-4f41-b669-e3f675488be4/buty-meskie-do-biegania-air-huarache-Zfxzn7.png"
     },
+    {
+        "brandId": "adidas",
+        "modelId": "campus",
+        "brand": "Adidas",
+        "model": "Campus 00s",
+        "price": 549.99,
+        "imagePath": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4659ee058ba34bd2a5d0af500104c17d_9366/Campus_00s_Shoes_Czern_HQ8708_01_standard.jpg"
+    },
+    {
+        "brandId": "adidas",
+        "modelId": "samba",
+        "brand": "Adidas",
+        "model": "Samba",
+        "price": 549.99,
+        "imagePath": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/3bbecbdf584e40398446a8bf0117cf62_9366/Buty_Samba_OG_Bialy_B75806_01_standard.jpg"
+    },
+    {
+        "brandId": "adidas",
+        "modelId": "campus",
+        "brand": "Adidas",
+        "model": "Campus 00s",
+        "price": 549.99,
+        "imagePath": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ce738cbe5342421996feaf5001044964_9366/Campus_00s_Shoes_Szary_HQ8707_01_standard.jpg"
+    },
+    {
+        "brandId": "adidas",
+        "modelId": "gazelle",
+        "brand": "Adidas",
+        "model": "Gazelle",
+        "price": 499.99,
+        "imagePath": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/97f86eede1374615a058a81700a27444_9366/Buty_Gazelle_Czern_CQ2809_01_standard.jpg"
+    },
+    {
+        "brandId": "adidas",
+        "modelId": "spezial",
+        "brand": "Adidas",
+        "model": "Spezial",
+        "price": 499.99,
+        "imagePath": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/fb18cfdee5484bafb694a97601138947_9366/Buty_Handball_Spezial_Niebieski_BD7632_01_standard.jpg"
+    },
+    {
+        "brandId": "adidas",
+        "modelId": "yeezy",
+        "brand": "Adidas",
+        "model": "Yeezy",
+        "price": 419.65,
+        "imagePath": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d0619255387a4ffe9b50ad90011df4dd_9366/YZY_QNTM_ADULTS_Szary_GX1317_01_standard.jpg"
+    },
     
     // Dodaj więcej produktów, jeśli to konieczne
 ];

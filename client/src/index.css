@@ -684,18 +684,29 @@ a {
     width: 95%;
   }
 
+  .products-box {
+    display: flex;
+  }
+
   .products-list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    width: 80%;
+    height: 20%;
+    overflow: scroll;
+    height: 848px;
   }
   
   .product-card {
-    width: 592px;
+    width: 492px;
     text-align: left;
     margin-block: 50px;
   }
 
+  .product-card img {
+    width: 100%;
+  }
   .product-card h1 {
     text-align: left;
     margin-left: 20px;
@@ -705,6 +716,33 @@ a {
     margin-left: 20px;
     color: #878787;
     font-weight: 400;
+  }
+  
+  .products-filter {
+    box-sizing: border-box;
+    width: 20%;
+    padding: 2vh 2%;
+    text-align: left;
+  }
+
+  .products-filter h1,
+  .products-filter p {
+    text-align: left;
+  }
+
+  .products-filter h1 {
+    margin-block: 1vh;
+    font-size: 250%;
+  }
+
+  .products-filter p {
+    color: #878787;
+    font-size: 130%;
+    cursor: pointer;
+  }
+
+  .products-filter p:hover {
+    color: #FF7B00;
   }
 }
 

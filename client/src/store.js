@@ -7,8 +7,17 @@ const useHeader = (set) => ({
     })) 
 }) 
 
+const useShoppingCart = (set) => ({
+    shoppingCart: [],  // Zmieniono na 'shoppingCart'
+    addProduct: (newProduct) => set((state) => ({
+        shoppingCart: [...state.shoppingCart, newProduct] // Zmieniono na 'shoppingCart'
+    }))
+})
+
 const useStore = create((set) => ({
-    ...useHeader(set)
+    ...useHeader(set),
+    ...useShoppingCart(set)
 }))
+
 
 export default useStore;

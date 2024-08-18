@@ -1,5 +1,11 @@
 https://66bc76f7ab602363e9659ca4--citykicks.netlify.app/
 
+# THE PROJECT HAS BEEN STOPPED, AND WILL BE CONTINUED IN THE FUTURE
+
+# [0.1.0]
+    - added shopping cart mechanism
+    - added products filter to responsiveness (1024px - 1439px)
+
 # [0.0.9]
     - added basic responsivenss to products list (shop.jsx)
     - added reset filter button to products filter 

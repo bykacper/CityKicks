@@ -2,18 +2,32 @@ import React, { useEffect, useState } from "react";
 import { productsLoader } from "../assets/data/products";
 import { useNavigate, useParams } from "react-router-dom";
 import models from "../assets/data/models";
+import useStore from "../store";
 
 export default function Products() {
     const { brand, model } = useParams();
-
     const { products } = productsLoader(brand, model);
+    const productToCart = useStore((state) => state.addProduct);
+    const cart = useStore((state) => state.shoppingCart);
+
+    const addProduct = (e) => {
+        const brand = e.target.parentNode.querySelector('h1').innerHTML;
+        const model = e.target.parentNode.querySelectorAll('h3')[0].innerHTML;
+        const price = e.target.parentNode.querySelectorAll('h3')[1].innerHTML;
+
+        productToCart({ brand, model, price });
+    }
+
+    useEffect(() => {
+        console.log(cart);
+    }, [cart])
 
     return (
         <div className="products-box">
             <ProductFilter />
             <section className="products-list">
                 {products.map(product => {
-                    return <ProductCard imagePath={product.imagePath} brand={product.brand} model={product.model} price={product.price} />
+                    return <ProductCard imagePath={product.imagePath} brand={product.brand} model={product.model} price={product.price} addProduct={e => addProduct(e)}/>
                 })}
             </section>
         </div>
@@ -21,9 +35,9 @@ export default function Products() {
     )
 }
 
-function ProductCard({ imagePath, brand, model, price }) {
+function ProductCard({ imagePath, brand, model, price, addProduct }) {
     return (
-        <div className="product-card">
+        <div className="product-card" onClick={addProduct}>
             <img src={imagePath} />
             <h1> {brand} </h1>
             <h3> {model} </h3>
